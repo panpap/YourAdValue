@@ -1,0 +1,18 @@
+{
+	"name" : "AdValue_clean",
+	"version" : "1.0",
+	"description" : "Estimating user value by tapping on RTB",
+	"permissions" : ["storage","tabs","activeTab", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*"],
+	"background" : {
+		"scripts" : ["libs/jquery-3.2.1.min.js","background.js"]
+	},
+	"browser_action" : {
+		"default_title" : "Monitor charged prices" ,
+	       "default_popup" : "popup.html"	
+	},
+	"icons" :{
+	       	"128":"icon.png"
+	},
+	"manifest_version" : 2
+
+}
