@@ -1,4 +1,4 @@
-[![YourAdValue](https://github.com/panpap/YourAdValue/blob/master/images/icon.png)]
+[![YourAdValue](https://github.com/panpap/YourAdValue/blob/master/images/icon.png)](https://github.com/panpap/YourAdValue)
 ---
 YourAdValue computes the per ad-slot and overall price paid for you by the ad ecosystem in real time.
 
