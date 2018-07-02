@@ -1,4 +1,3 @@
-[//]: <> ([![YourAdValue](https://github.com/panpap/YourAdValue/blob/master/images/icon.png)](https://github.com/panpap/YourAdValue))
 #YourAdValue
 ---
 
