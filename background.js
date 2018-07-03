@@ -83,25 +83,6 @@ function disableValue() {
 function enableValue() {
     disable = 0;
 }
-function disableDonations() {
-    disableDonation = 1;
-}
-function enableDonations() {
-    disableDonation = 0;
-}
-
-function getDoNotTrackStatus() {
-    //checks if the do not track option is enbaled 
-    //returns a string with the value
-    if(navigator.doNotTrack === '1') return 'enabled';
-    else                           return 'disabled';
-}
-
-function getGeolocation() {
-    //TO DO 
-    //add the countries to buckets in order to achieve anonymity
-}
-
 function timeOfDayRange() {
     //return the hour in a anomized way,in intervals of 3 hours
     //the return value is a string
@@ -131,69 +112,11 @@ function ageRange(age) {
     else                               return 'null';
 }
 
-function donationDataConcat(url) {
-    return gender + " " + ageRange(age) + " " + country  + " " +timeOfDayRange() + " "+ getDay() + " " +url;
-}
-
-function saveUser(age,gender){
-    var age = ageRange(age);
-    chrome.storage.sync.set({"user_age":age},function() {
-        if(chrome.runtime.error) {
-            console.log("Runtime error")
-        }
-    });
-    chrome.storage.sync.set({"user_gender":gender}, function() {
-         if(chrome.runtime.error) {
-            console.log("Runtime error")
-        }
-    });
-}
-
-function scrapFacebook(url) {
-	//check if the page is facebook and if the user is on fb scrap the basic info needed
-	if (url === 'https://www.facebook.com/') {
-		$.get(url,function(data){
-			start = data.substring(data.search('ACCOUNT_ID'));
-			finish = start.indexOf(',');
-			ACCOUNT_ID = start.substring(0,finish).split(':')[1].replace(/"/g,""); //get the account id of the facebook user
-			console.log(ACCOUNT_ID);
-			$.get('https://www.facebook.com/'+ACCOUNT_ID+'/about?section=contact-info',function(fb_data){
-				start = fb_data.substring(fb_data.search('u_0_2h'));		       //get the Basic Information line to start scraping
-				//start = fb_data.substring('Basic Information');		       //get the Basic Information line to start scraping
-				finish = start.indexOf('-->')
-				BASIC_INFO = start.substring(0,finish)			       //line containing the basic information
-				//console.log(BASIC_INFO);
-				//get month-day
-				sub = BASIC_INFO.substring(BASIC_INFO.search('class="_2iem">'));
-				//console.log(sub);
-				finish = sub.indexOf('</')
-				var date = sub.substring(sub.indexOf('>')+1,finish)
-
-				sub = sub.substring(finish)
-				sub = sub.substring(sub.search('class="_2iem">'))
-				finish = sub.indexOf('</')
-				var year = sub.substring(sub.indexOf('>')+1,finish)
-
-				sub = sub.substring(finish)
-				sub = sub.substring(sub.search('class="_2iem">'))
-				finish = sub.indexOf('</')
-				var gender = sub.substring(sub.indexOf('>')+1,finish)
-
-				console.log(date);
-				console.log(year);
-				console.log(gender);
-                saveUser(year, gender);
-			});
-		});
-	}
-}
-
 function intercept()
 {
 	var blocked = false;
 	try {
 		chrome.webRequest.onBeforeRequest.addListener( function(info) {
-         if (disable === 0) {
 			blocked = true;
             //var t0 = performance.now();
 			var params = info.url.substring(info.url.indexOf('?')+1);
@@ -205,11 +128,6 @@ function intercept()
             for(adv in adDB)
                 if(stripped_domain[2].includes(adDB[adv]))
                     stripped_domain[2] = adDB[adv]
-
-			if(domain === 'https://www.facebook.com/' && facebook_flag === 0 && gender === null){
-				facebook_flag = 1;
-				scrapFacebook(domain);
-			}
             
             //try to find a price keyword without looking at the advertisers dictionary
             //will be used only if the dictionary fails
@@ -237,9 +155,6 @@ function intercept()
 					session_value = session_value + calculatePrice(parseFloat(res[1]));
 					console.log(session_value);
                     saveYourValue(yourValue);
-                    urltoprice = donationDataConcat(urltoprice);
-					addPrices({timestamp,urltoprice});
-					donateData();
 				}
 				else {
 					//price is encryted
@@ -262,12 +177,8 @@ function intercept()
 						saveTotalEnc(total_enc);
 						yourValue = yourValue + calculatePrice(parseFloat(price));
 						session_value = sessionvalue + calculatePrice(parseFloat(price));
-						saveYourValue(yourValue);
 						//could add the features I want ot donate seperated by the '|' delimiter
 						var urltoprice = info.url+" -> "+res[0]+"->"+res[1];
-                        urltoprice = donationDataConcat(urltoprice);
-						addPrices({timestamp,urltoprice});
-						donateData();
 					} else {
 						console.log("Not found prediction for the given features");
 						//increment the counter of the encrypted prices even if the 
@@ -283,22 +194,6 @@ function intercept()
 					path: "images/icon-38.png"});
 				chrome.browserAction.setBadgeText({ text: newPrices.toString()});
 			}
-			else {
-				//what to do if not in dictionary
-				//send the data back to server for manual inspection
-				
-				//it is an advertiser AND the url contains a price keyword but it does not 
-                //corresponds to this advertiser
-				if(adDB.includes(stripped_domain[2]) && (price_keyword !== null) && (priceKeywords.includes(price_keyword))) {
-					console.log(info.url);
-					//send the url to server for manual inspection
-					//will be removed from the final version
-					sendForManualInspection(info.url);
-				}
-			}
-        //var t1 = performance.now();
-        //console.log("time to run intercept in ms: "+ (t1 - t0)+"ms");
-		 }
         },
 			{
 				urls: ["https://*/*", "http://*/*",],
@@ -330,12 +225,6 @@ function getFeatures(info) {
 
 //return the categor
 function getCategoria(info) {
-    /*var domain = null;
-    if(domain === null) {
-        chrome.tabs.query({'active': true, 'lastFocusedWindow':true},function(tab){
-            domain = tab[0].url;
-        });
-    }*/
 	var domain = info.url.split('?')[0];
 	var stripped_domain = domain.match(/^(https?\:\/\/)?(?:www\.)?([^\/?#]+)(?:[\/?#]|$)/i);
  	if(IABs[stripped_domain[2]] !== "undefined") {
@@ -398,21 +287,6 @@ function getOperatingSystem() {
 
 //takes as argument the domain and returns the ad exchange
 function getPublisher(url) {
-/*	if (urlParams === null) return "undef";
-	var paramList = urlParams.split("&");
-	for( i in paramList) {
-		var parts = paramList[i].split('=');
-		if( parts[0] === "publisher" && parts[1].length > 0) return parts[1]; 
-	}
-	return "undef";
-	*/
-    /*
-	if( url.toLowerCase().indexOf("google") > -1 )         return "Google";
-	else if( url.toLowerCase().indexOf("openx") > -1)      return "OpenX";
-	else if( url.toLowerCase().indexOf("pulsepoint") > -1) return "PulsePoint";
-	else if( url.toLowerCase().indexOf("rubicon") > -1)    return "Rubicon";
-	else                                                   return "undef";
-    */
     for(var ex in adDB){
         if(url.includes(adDB[ex]))
             return adDB[ex];
@@ -592,16 +466,6 @@ function parseXML(xmlTree) {
 	}
 
 }
-/*
-//save the price received
-function savePrice(pr) {
-	chrome.storage.sync.set({ "charge_prices":pr}, function() {
-		if (chrome.runtime.error) {
-			console.log("Runtime error.");
-		}
-	});
-}
-*/
 function saveYourValue(vl) {
 	chrome.storage.sync.set({"yourValue":vl}, function() {
 		if (chrome.runtime.error) {
@@ -724,22 +588,6 @@ $.getJSON(adDB_url, function(data){
 	console.log(adDB);
 });
 
-chrome.storage.sync.get('user_gender', function(vl) {
-    if (typeof vl.user_gender === 'undefined') {
-        gender = null;
-    } else {
-        gender = vl.user_gender;
-    }
-});
-
-chrome.storage.sync.get('user_age', function(vl) {
-    if (typeof vl.user_age === 'undefined') {
-        age = null;
-    } else {
-        age = vl.user_age;
-    }
-});
-
 chrome.storage.sync.get('yourValue', function(vl) {
 	if (typeof vl.yourValue === 'undefined') {
 		yourValue = 0;
@@ -806,68 +654,6 @@ function addPrices(e) {
 		console.log("Error",ev.target.error.name);
 		store.put(e);
 	}
-}
-
-function donateData() {
-    if(disableDonation === 0) {
-	var tx = db.transaction(["URLarray"],"readwrite");
-	var store = tx.objectStore("URLarray");
-	var request = store.getAll();
-	var ret;
-	console.log("calling donate Data");
-	request.onsuccess = function(ev) {
-		ret = request.result;
-		console.log(ret);
-		if (ret.length > 100) {
-			var urls = '[';
-			//afairw to -5 otan einai na to steilw
-			for(var i = 0; i < ret.length-5; i++) {
-				urls = urls +"{"+ ret[i].urltoprice +"},";
-				//console.log(i +": "+ret[i].urltoprice);
-			}
-			urls = urls + "]";
-			//console.log(urls);
-			var tosend =  JSON.stringify(urls);
-			console.log(ret.length);
-			$.ajax({
-				url: 'http://139.91.70.35:35479/DonateData/DonateServlet',
-				type: 'POST',
-				data:  tosend,
-				datatype: 'text',
-				success: function(result) {
-					//console.log(param);
-					console.log('SUCCESS');
-				},
-				error: function(result) {
-					console.log('ERROR');
-				},
-				contentType: "charset=utf-8"
-			});
-		clearPricesArray();
-		}
-		
-	}
-    }
-}
-
-function sendForManualInspection(url) {
-    if (disableDonation === 0) {
-	console.log("send for manual inspection");
-	var tosend = JSON.stringify(url);
-	$.ajax({
-		url: 'http://139.91.70.35:35479/ManualInspectionUrls/ManualInspectionUrls',
-		type: 'POST',
-		data: tosend,
-		datatype: 'text',
-		success: function(result) {
-			console.log('SUCCESS')
-		},
-		error: function(result) {
-			console.log('ERROR');
-		},
-		contentType: "charset=utf-8"
-	});
-    }
 }
 
 function clearPricesArray() {	

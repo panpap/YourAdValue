@@ -78,7 +78,7 @@ document.getElementById("switch").addEventListener("click",function(){
 		//document.getElementById('DisTag').innerHTML = '<h2>Disable Plugin</h2>';
 	}
 });
-
+/*
 function EnableDonations() {
     //return "<label align='left' id='switch'>"+
   	return	   "<input type='button' value='Enable Donations' id='switch2'>"//+
@@ -112,7 +112,7 @@ document.getElementById("switch2").addEventListener("click",function(){
 		document.getElementById('switch2').value = 'Disable Donations';
 		//document.getElementById('DisTag').innerHTML = '<h2>Disable Plugin</h2>';
 	}
-});
+});*/
 
 function openDescription() {
    chrome.browserAction.onClicked.addListener(function(activeTab){
