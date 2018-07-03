@@ -98,20 +98,6 @@ function timeOfDayRange() {
     else                             return '21:00'
 }
 
-function ageRange(age) {
-    var age = parseInt(age);
-    if(age >= 2010 && age < 2020) return '10';
-    else if(age >= 2000 && age < 2010) return '20';
-    else if(age >= 1990 && age < 2000) return '30';
-    else if(age >= 1980 && age < 1990) return '40';
-    else if(age >= 1970 && age < 1980) return '50';
-    else if(age >= 1960 && age < 1970) return '60';
-    else if(age >= 1950 && age < 1960) return '70';
-    else if(age >= 1940 && age < 1950) return '80';
-    else if(age >= 1930 && age < 1940) return '90';
-    else                               return 'null';
-}
-
 function intercept()
 {
 	var blocked = false;
