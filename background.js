@@ -493,10 +493,10 @@ function getTree()
 		}
 	}
 	//xhr.open('GET','http://139.91.70.77:35479/WebApplication1/TestServlet',true);
-	xhr.open('GET','http://139.91.70.35:35479/SendXMLTree/SendXML',true)
+	//xhr.open('GET','http://139.91.70.35:35479/SendXMLTree/SendXML',true)
+	xhr.open('GET','DT/ParsedXML4.xml',true)
 	xhr.send(null);
 }
-
 
 function printTree(data)
 {
@@ -513,7 +513,6 @@ function removeEmptyFields(arr) {
 	}
 	return ret;
 }
-
 
 //this is used to check if the tree exists
 if(treeXML_2 === null) {
