@@ -87,7 +87,8 @@ body {
 }
 
 #switch {
-    min-width: 50%;
+    width:330px;
+    min-width: 99%;
     background-color: #a6a6a8;
     /*background-color: #20c3cf;*/
     border: none;
@@ -103,7 +104,7 @@ body {
 #switch2 {
     position: relative;
     float: right;
-    width: 150px;
+    width: 330px;
     height: 34;
     /*background-color: #20c3cf;*/
     background-color: #a6a6a8;
