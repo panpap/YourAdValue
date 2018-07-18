@@ -10,7 +10,6 @@ Chrome: <a href="https://">Download</a>
 
 Before Downloading please read and accept our <a hred="https://github.com/panpap/YourAdValue/blob/master/YourAdValue_EULA.pdf">EULA</a>
 
-```html
 
 <h1>YourAdValue Extension</h1>
         <h3>1. Installation</h3>
@@ -47,4 +46,4 @@ Before Downloading please read and accept our <a hred="https://github.com/panpap
             <img src="images/caught_ad.png">
             <figcaption>Figure 3. The plugin in action.</figcaption>
         </figure>
-```
+
