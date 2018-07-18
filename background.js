@@ -28,29 +28,7 @@ var decisionTree = null;
 var priceKeywords = ["price","pp","pr","bidprice","bid_price","bp","winprice","computedprice","pricefloor","win_price","wp","chargeprice","charge_price","cp","extcost","tt_bidprice","bdrct","hbprice","hb_bid","cost","wtbwinprice","rtb_win_price","rtbwp","bidfloor","seatbid","price_paid","maxPriceInUserCurrency",
 "uid","_pp","x_price","title","_p","add_code","acp","description1","p","ep","wp_exchange","z","value","crtbwp"];
 
-/*
-var publisherKeywordTable = {"rfihub.net": ["ep"],
-                             "invitemedia.com": ["cost"],
-                             "scorecardresearch.com":["uid"],
-                             "r4u.com":["_pp"],
-                             "adsrvr.org":["wp"],
-                             "tubemogul.com":["x_price","price"],
-                             "pardot.com":["title"],
-                             "adsvana.com":["_p"],
-                             "doubleclick.net":["pr"],
-                             "ib.adnxs.com":["add_code"],
-                             "turn.com":["acp"],
-                             "ams1.adnxs.com":["pp"],
-                             "mathtag.com":["price"],
-                             "youtube.com":["descriprion1"],
-                             "quantcount.com":["p"],
-                             "rfihub.com":["ep"],
-                             "w55c.net":["wp_exchange"],
-                             "adnxs.com":["pp"],
-                             "gwallet.com":["win_price"],
-                             "criteo.com":["z"],
-                             "casalemedia.com":["cp"]};
-*/
+
 var publisherKeywordTable = {};
 
 var prices;
@@ -62,9 +40,6 @@ var total_plain;
 //if it's 1 it doesn't
 var disable = 0;
 var disableDonation = 0;
-//variables to hold users age and gender
-var age;
-var gender;
 
 //counters for the current session
 var session_plain = 0;
@@ -144,42 +119,41 @@ function intercept()
 				}
 				else {
                     chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
-                           function(tabs){
-                               var curr_tab = tabs[0].url;
-					//price is encryted
-					//we need to collect the user features
-					//and run classification on the DT
-					//in order to find out the prediction about the price
-                    console.log("URL:"+curr_tab);
-					var features = getFeatures(info);
-					//if we have not create the DT yet create it
-					if (decisionTree === null) decisionTree = parseXML(treeXML_2);
-					//predict the price
-					var price = classify(decisionTree._root,features);
-					if (isNumeric(price)) {
-						//we found a predicted price
-						var timestamp = new Date().getTime();
-						//prices[timestamp] = info.url+" -> "+res[0]+"->"+price;
-						console.log("Price prediction found.Prediction: "+price);
-						//savePrice(prices);
-						total_enc = total_enc + 1;
-						session_enc = session_enc + 1;
-						saveTotalEnc(total_enc);
-						yourValue = yourValue + calculatePrice(parseFloat(price));
-						session_value = sessionvalue + calculatePrice(parseFloat(price));
-						//could add the features I want ot donate seperated by the '|' delimiter
-						var urltoprice = info.url+" -> "+res[0]+"->"+res[1];
-					} else {
-						console.log("Not found prediction for the given features");
-						//increment the counter of the encrypted prices even if the 
-                        //price wasn't predicted
-                        total_enc = total_enc + 1;
-						session_enc = session_enc + 1;
-						saveTotalEnc(total_enc);
-					}
-                     
-                           });
-                }
+                        function(tabs){
+                            var curr_tab = tabs[0].url;
+            				//price is encryted
+			            	//we need to collect the user features
+					        //and run classification on the DT
+					        //in order to find out the prediction about the price
+                            console.log("URL:"+curr_tab);
+					        var features = getFeatures(info);
+					        //if we have not create the DT yet create it
+					        if (decisionTree === null) decisionTree = parseXML(treeXML_2);
+					        //predict the price
+					        var price = classify(decisionTree._root,features);
+					        if (isNumeric(price)) {
+						        //we found a predicted price
+						        var timestamp = new Date().getTime();
+						        //prices[timestamp] = info.url+" -> "+res[0]+"->"+price;
+						        console.log("Price prediction found.Prediction: "+price);
+						        //savePrice(prices);
+						        total_enc = total_enc + 1;
+						        session_enc = session_enc + 1;
+						        saveTotalEnc(total_enc);
+						        yourValue = yourValue + calculatePrice(parseFloat(price));
+						        session_value = sessionvalue + calculatePrice(parseFloat(price));
+						        //could add the features I want ot donate seperated by the '|' delimiter
+						        var urltoprice = info.url+" -> "+res[0]+"->"+res[1];
+					        } else {
+						        console.log("Not found prediction for the given features");
+						        //increment the counter of the encrypted prices even if the 
+                                //price wasn't predicted
+                                total_enc = total_enc + 1;
+						        session_enc = session_enc + 1;
+						        saveTotalEnc(total_enc);
+					        }
+                        });
+               }
 				//savePrice(prices);
 				chrome.browserAction.setIcon({
 					path: "images/icon-38.png"});
@@ -207,11 +181,8 @@ function getFeatures(info) {
 	
 	var params = info.url.substring(info.url.indexOf('?')+1);
 	var winnerDSP = info.url.split('?')[0];
-	//var publisher = getPublisher(winnerDSP);
-	//var adsize = getAdSize(params); 
 	
 	return user_location+"|"+ getTrafficType()+ "|" + getHourOfDay()+"|" + getDay() +"|"+ getPlatform()+"|"+ getFormat(params)+"|"+getOperatingSystem()+"|"+getPublisher(winnerDSP)+"|"+getCategoria(info);
-	//return user_location+"|"+winnerDSP+"|"+timeOfDay+"|"+dayOfWeek+"|"+publisher+"|"+adsize;
 }
 
 //return the categor
@@ -497,9 +468,7 @@ function getTree()
 			saveXML(data);
 		}
 	}
-	//xhr.open('GET','http://139.91.70.77:35479/WebApplication1/TestServlet',true);
-	//xhr.open('GET','http://139.91.70.35:35479/SendXMLTree/SendXML',true)
-	xhr.open('GET','DT/ParsedXML4.xml',true)
+	xhr.open('GET','DT/ParsedXML4.xml',true);
 	xhr.send(null);
 }
 
