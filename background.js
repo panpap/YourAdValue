@@ -143,10 +143,14 @@ function intercept()
                     saveYourValue(yourValue);
 				}
 				else {
+                    chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
+                           function(tabs){
+                               var curr_tab = tabs[0].url;
 					//price is encryted
 					//we need to collect the user features
 					//and run classification on the DT
 					//in order to find out the prediction about the price
+                    console.log("URL:"+curr_tab);
 					var features = getFeatures(info);
 					//if we have not create the DT yet create it
 					if (decisionTree === null) decisionTree = parseXML(treeXML_2);
@@ -173,8 +177,9 @@ function intercept()
 						session_enc = session_enc + 1;
 						saveTotalEnc(total_enc);
 					}
-
-				}
+                     
+                           });
+                }
 				//savePrice(prices);
 				chrome.browserAction.setIcon({
 					path: "images/icon-38.png"});
