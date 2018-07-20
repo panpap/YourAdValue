@@ -1,19 +1,19 @@
 //Decision Tree
 
 function Node(lb, leaf, ind, inf) {
-	this.label = lb;
-	this.children = [];
-	this.conditions = [];
-	this.parent = null;
-	this.isLeaf = leaf;
-	this.index = ind;
-	this.info = inf
+    this.label = lb;
+    this.children = [];
+    this.conditions = [];
+    this.parent = null;
+    this.isLeaf = leaf;
+    this.index = ind;
+    this.info = inf
 }
 
 function Tree(dt) {
-	//var node = new Node(dt);
-	var node = dt;
-	this._root = node;
+    //var node = new Node(dt);
+    var node = dt;
+    this._root = node;
 }
 
 //global vars
@@ -75,176 +75,176 @@ function timeOfDayRange() {
 
 function intercept()
 {
-	var blocked = false;
-	try {
-		chrome.webRequest.onBeforeRequest.addListener( function(info) {
-			blocked = true;
+    var blocked = false;
+    try {
+        chrome.webRequest.onBeforeRequest.addListener( function(info) {
+            blocked = true;
             //var t0 = performance.now();
-			var params = info.url.substring(info.url.indexOf('?')+1);
-			var domain = info.url.split('?')[0];
-			var res = has_PriceKeyword(params);
-			var stripped_domain = domain.match(/^(https?\:\/\/)?(?:www\.)?([^\/?#]+)(?:[\/?#]|$)/i);
-			var price_keyword;
+            var params = info.url.substring(info.url.indexOf('?')+1);
+            var domain = info.url.split('?')[0];
+            var res = has_PriceKeyword(params);
+            var stripped_domain = domain.match(/^(https?\:\/\/)?(?:www\.)?([^\/?#]+)(?:[\/?#]|$)/i);
+            var price_keyword;
 
             for(adv in adDB)
                 if(stripped_domain[2].includes(adDB[adv]))
                     stripped_domain[2] = adDB[adv]
-            
+
             //try to find a price keyword without looking at the advertisers dictionary
             //will be used only if the dictionary fails
-			if(res !== null && res.length > 1) price_keyword = res[0];
-			
+            if(res !== null && res.length > 1) price_keyword = res[0];
+
             //if it's a known advertister AND this advertiser is in the dictionary with the advertiser-keywords pairs AND in the advertiser url there is a price keyword that corresponds to this advertiser
-			if((adDB.includes(stripped_domain[2])) && (stripped_domain[2] in publisherKeywordTable) && (has_matching_PriceKeyword(publisherKeywordTable[stripped_domain[2]],params) !== null) ) {
-				console.log(info.url);
-				newPrices++;
+            if((adDB.includes(stripped_domain[2])) && (stripped_domain[2] in publisherKeywordTable) && (has_matching_PriceKeyword(publisherKeywordTable[stripped_domain[2]],params) !== null) ) {
+                console.log(info.url);
+                newPrices++;
                 //add to res the correct keyword and price
                 var res = has_matching_PriceKeyword(publisherKeywordTable[stripped_domain[2]],params);
-				//what to do if price is not encrypted
-				if (isNumeric(res[1])) {
-					console.log(domain+"\n"+params+"\nPRICE:"+calculatePrice(res[1]));
-					var timestamp = new Date().getTime();
-					//prices[timestamp] = info.url+" -> "+res[0]+"->"+res[1];
-					var urltoprice = info.url+" -> "+res[0]+"->"+calculatePrice(res[1]);
-					//console.log(tree);
-					//console.log(getFeatures(info));
-					//savePrice(prices);
-					total_plain = total_plain + 1;
-					session_plain = session_plain + 1;
-					saveTotalPlain(total_plain);
-					yourValue = yourValue + calculatePrice(parseFloat(res[1]));
-					session_value = session_value + calculatePrice(parseFloat(res[1]));
-					console.log(session_value);
+                //what to do if price is not encrypted
+                if (isNumeric(res[1])) {
+                    console.log(domain+"\n"+params+"\nPRICE:"+calculatePrice(res[1]));
+                    var timestamp = new Date().getTime();
+                    //prices[timestamp] = info.url+" -> "+res[0]+"->"+res[1];
+                    var urltoprice = info.url+" -> "+res[0]+"->"+calculatePrice(res[1]);
+                    //console.log(tree);
+                    //console.log(getFeatures(info));
+                    //savePrice(prices);
+                    total_plain = total_plain + 1;
+                    session_plain = session_plain + 1;
+                    saveTotalPlain(total_plain);
+                    yourValue = yourValue + calculatePrice(parseFloat(res[1]));
+                    session_value = session_value + calculatePrice(parseFloat(res[1]));
+                    console.log(session_value);
                     saveYourValue(yourValue);
-				}
-				else {
+                }
+                else {
                     chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
                         function(tabs){
                             var curr_tab = tabs[0].url;
-            				//price is encryted
-			            	//we need to collect the user features
-					        //and run classification on the DT
-					        //in order to find out the prediction about the price
+                            //price is encryted
+                            //we need to collect the user features
+                            //and run classification on the DT
+                            //in order to find out the prediction about the price
                             console.log("URL:"+curr_tab);
-					        var features = getFeatures(info);
-					        //if we have not create the DT yet create it
-					        if (decisionTree === null) decisionTree = parseXML(treeXML_2);
-					        //predict the price
-					        var price = classify(decisionTree._root,features);
-					        if (isNumeric(price)) {
-						        //we found a predicted price
-						        var timestamp = new Date().getTime();
-						        //prices[timestamp] = info.url+" -> "+res[0]+"->"+price;
-						        console.log("Price prediction found.Prediction: "+price);
-						        //savePrice(prices);
-						        total_enc = total_enc + 1;
-						        session_enc = session_enc + 1;
-						        saveTotalEnc(total_enc);
-						        yourValue = yourValue + calculatePrice(parseFloat(price));
-						        session_value = sessionvalue + calculatePrice(parseFloat(price));
-						        //could add the features I want ot donate seperated by the '|' delimiter
-						        var urltoprice = info.url+" -> "+res[0]+"->"+res[1];
-					        } else {
-						        console.log("Not found prediction for the given features");
-						        //increment the counter of the encrypted prices even if the 
+                            var features = getFeatures(info);
+                            //if we have not create the DT yet create it
+                            if (decisionTree === null) decisionTree = parseXML(treeXML_2);
+                            //predict the price
+                            var price = classify(decisionTree._root,features);
+                            if (isNumeric(price)) {
+                                //we found a predicted price
+                                var timestamp = new Date().getTime();
+                                //prices[timestamp] = info.url+" -> "+res[0]+"->"+price;
+                                console.log("Price prediction found.Prediction: "+price);
+                                //savePrice(prices);
+                                total_enc = total_enc + 1;
+                                session_enc = session_enc + 1;
+                                saveTotalEnc(total_enc);
+                                yourValue = yourValue + calculatePrice(parseFloat(price));
+                                session_value = sessionvalue + calculatePrice(parseFloat(price));
+                                //could add the features I want ot donate seperated by the '|' delimiter
+                                var urltoprice = info.url+" -> "+res[0]+"->"+res[1];
+                            } else {
+                                console.log("Not found prediction for the given features");
+                                //increment the counter of the encrypted prices even if the 
                                 //price wasn't predicted
                                 total_enc = total_enc + 1;
-						        session_enc = session_enc + 1;
-						        saveTotalEnc(total_enc);
-					        }
+                                session_enc = session_enc + 1;
+                                saveTotalEnc(total_enc);
+                            }
                         });
-               }
-				//savePrice(prices);
-				chrome.browserAction.setIcon({
-					path: "images/icon-38.png"});
-				chrome.browserAction.setBadgeText({ text: newPrices.toString()});
-			}
+                }
+                //savePrice(prices);
+                chrome.browserAction.setIcon({
+                    path: "images/icon-38.png"});
+                chrome.browserAction.setBadgeText({ text: newPrices.toString()});
+            }
         },
-			{
-				urls: ["https://*/*", "http://*/*",],
-			},
-			["blocking"]);
-	} catch (ErrorMessage) {
-		console.log("page:" + ErrorMessage);
-	}
+            {
+                urls: ["https://*/*", "http://*/*",],
+            },
+            ["blocking"]);
+    } catch (ErrorMessage) {
+        console.log("page:" + ErrorMessage);
+    }
 }
 
 var user_location = null;
 var country = null
 $.getJSON("http://www.ip-api.com/json",function(data) {
-	user_location = data.city;
+    user_location = data.city;
     country = data.country;
-	console.log("User's town: "+ user_location+"User's country: "+country);
+    console.log("User's town: "+ user_location+"User's country: "+country);
 });
 
 function getFeatures(info) {
-	
-	var params = info.url.substring(info.url.indexOf('?')+1);
-	var winnerDSP = info.url.split('?')[0];
-	
-	return user_location+"|"+ getTrafficType()+ "|" + getHourOfDay()+"|" + getDay() +"|"+ getPlatform()+"|"+ getFormat(params)+"|"+getOperatingSystem()+"|"+getPublisher(winnerDSP)+"|"+getCategoria(info);
+
+    var params = info.url.substring(info.url.indexOf('?')+1);
+    var winnerDSP = info.url.split('?')[0];
+
+    return user_location+"|"+ getTrafficType()+ "|" + getHourOfDay()+"|" + getDay() +"|"+ getPlatform()+"|"+ getFormat(params)+"|"+getOperatingSystem()+"|"+getPublisher(winnerDSP)+"|"+getCategoria(info);
 }
 
 //return the categor
 function getCategoria(info) {
-	var domain = info.url.split('?')[0];
-	var stripped_domain = domain.match(/^(https?\:\/\/)?(?:www\.)?([^\/?#]+)(?:[\/?#]|$)/i);
- 	if(IABs[stripped_domain[2]] !== "undefined") {
-		return IABs[stripped_domain[2]];
-	} else {
-		return "NaN";
-	}
+    var domain = info.url.split('?')[0];
+    var stripped_domain = domain.match(/^(https?\:\/\/)?(?:www\.)?([^\/?#]+)(?:[\/?#]|$)/i);
+    if(IABs[stripped_domain[2]] !== "undefined") {
+        return IABs[stripped_domain[2]];
+    } else {
+        return "NaN";
+    }
 }
 
 //this plugin is for the chrome desktop edition
 //si the traffic will always be WEB
 function getTrafficType() {
- 	return "WEB";
+    return "WEB";
 }
 
 function getDay() {
-	var day = new Date().getDay();
-	return day; 
+    var day = new Date().getDay();
+    return day; 
 }
 
 //currently we support only dekstop
 function getPlatform() {
-	return "Desktop";
+    return "Desktop";
 }
 
 function getHourOfDay() {
-	var hour = new Date().getHours();
-	if (hour <= 9)		return "12am-9am";
-	else if (hour <= 18)    return "9am-6pm";
-	else			return "6pm-12am";
+    var hour = new Date().getHours();
+    if (hour <= 9)		return "12am-9am";
+    else if (hour <= 18)    return "9am-6pm";
+    else			return "6pm-12am";
 }
 
 //return the ad resolution if it exists
 function getFormat(urlParams) {
-	if(urlParams === null) return "undef";
-	var paramList = urlParams.split("&");
-	var adSize = "undef";
-	for(i in paramList) {
-		var parts = paramList[i].split('=');
+    if(urlParams === null) return "undef";
+    var paramList = urlParams.split("&");
+    var adSize = "undef";
+    for(i in paramList) {
+        var parts = paramList[i].split('=');
         if(parts[0] === "size" || parts[0] === "adsize" || parts[0] === "sz" || parts[0] === "res" || parts[0] === "dims")  return parts[1];
-		if(parts[0] === "width" && parts[1].length > 0 ) adSize = parts[1];
-		if(parts[0] === "vadw" && parts[1].length > 0 ) adSize = parts[1];
-		if(parts[0] === "winWidth" && parts[1].length > 0 ) adSize = parts[1];
+        if(parts[0] === "width" && parts[1].length > 0 ) adSize = parts[1];
+        if(parts[0] === "vadw" && parts[1].length > 0 ) adSize = parts[1];
+        if(parts[0] === "winWidth" && parts[1].length > 0 ) adSize = parts[1];
 
-		if(parts[0] === "height" && parts[1].length > 0) adSize += "x"+parts[1];
-		if(parts[0] === "vadh" && parts[1].length > 0) adSize += "x"+parts[1];
-		if(parts[0] === "winHeight" && parts[1].length > 0) adSize += "x"+parts[1];
-	}
-	return adSize;
+        if(parts[0] === "height" && parts[1].length > 0) adSize += "x"+parts[1];
+        if(parts[0] === "vadh" && parts[1].length > 0) adSize += "x"+parts[1];
+        if(parts[0] === "winHeight" && parts[1].length > 0) adSize += "x"+parts[1];
+    }
+    return adSize;
 }
 
 function getOperatingSystem() {
-	var OS = "Unknown OS";
-	if(navigator.appVersion.indexOf("Win") != -1) OS = "Windows";
-	if(navigator.appVersion.indexOf("Mac") != -1) OS = "MacOS";
-	if(navigator.appVersion.indexOf("X11") != -1) OS = "UNIX";
-	if(navigator.appVersion.indexOf("Linux") != -1) OS = "Linux";
-	return OS;
+    var OS = "Unknown OS";
+    if(navigator.appVersion.indexOf("Win") != -1) OS = "Windows";
+    if(navigator.appVersion.indexOf("Mac") != -1) OS = "MacOS";
+    if(navigator.appVersion.indexOf("X11") != -1) OS = "UNIX";
+    if(navigator.appVersion.indexOf("Linux") != -1) OS = "Linux";
+    return OS;
 }
 
 //takes as argument the domain and returns the ad exchange
@@ -270,13 +270,13 @@ function has_matching_PriceKeyword(keywordsList,urlParams) {
 }
 
 function has_PriceKeyword(urlParams) {
-	if (urlParams === null) return urlParams;
-	var paramsList = urlParams.split("&");
-	for( i in paramsList) {
-		var parts = paramsList[i].split("=");
-		if (priceKeywords.indexOf(parts[0]) > -1 && parts[1].length > 0) return [parts[0],parts[1]]
-	}
-	return null;
+    if (urlParams === null) return urlParams;
+    var paramsList = urlParams.split("&");
+    for( i in paramsList) {
+        var parts = paramsList[i].split("=");
+        if (priceKeywords.indexOf(parts[0]) > -1 && parts[1].length > 0) return [parts[0],parts[1]]
+    }
+    return null;
 }
 
 /*Takes as parameter the price catch in the url. 
@@ -304,206 +304,206 @@ function calculatePrice(pr) {
 }
 
 function isNumeric(n) {
-	return !isNaN(parseFloat(n)) && isFinite(n);
+    return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
 function classify(root,attrStr) {
-	var attrs = attrStr.split("\|");
-	return _classify(root,attrs);
+    var attrs = attrStr.split("\|");
+    return _classify(root,attrs);
 }
 
 //function to return the index based of the attribute name
 function attributeToIndex(attr) {
-	if (attr === "CIUDAD") 			return 1;
-	else if (attr === "TIPO-DE-TRAFICO")    return 2;
-	else if (attr === "RANGO-HORAS")        return 3;
-	else if (attr === "DIA-DE-LA-SEMANA")  	return 4;
-	else if (attr === "DISPOSITIVO") 	return 5;
-	else if (attr === "FORMATO") 		return 6;
-	else if (attr === "SISTEMA-OPERATIVO")  return 7;
-	else if (attr === "AD-EXCHANGES") 	return 8;
-	else if (attr === "CATEGORIA") 		return 9;
-	else if (attr === "PRECIO-IMPRESION") 	return 10;
-	else 					return 0;
+    if (attr === "CIUDAD") 			return 1;
+    else if (attr === "TIPO-DE-TRAFICO")    return 2;
+    else if (attr === "RANGO-HORAS")        return 3;
+    else if (attr === "DIA-DE-LA-SEMANA")  	return 4;
+    else if (attr === "DISPOSITIVO") 	return 5;
+    else if (attr === "FORMATO") 		return 6;
+    else if (attr === "SISTEMA-OPERATIVO")  return 7;
+    else if (attr === "AD-EXCHANGES") 	return 8;
+    else if (attr === "CATEGORIA") 		return 9;
+    else if (attr === "PRECIO-IMPRESION") 	return 10;
+    else 					return 0;
 }
 
 //compare the label of a node with a given feature
 //it returns true if the comparison holds
 //otherwise false
 function comparator(condition, feature) {
-	var operator = condition.split(" ")[0];
-	var value = condition.split(" ")[1];
-	//if the operator is >,<,>=,<= the value must be numeric
-	if( operator === ">=") {
-		if (parseFloat(feature) >= parseFloat(value)) return true;
-		else					      return false;
-	} else if( operator === "<=") {
-		if(parseFloat(feature) <= parseFloat(value)) return true;
-		else					     return false;
-	} else if( operator === "=" ) {
-		if (isNumeric(value)) {
-			if(parseFloat(feature) === parseFloat(value)) return true;
-			else					      return false;
-		} else {
-			if(feature === value) return true;
-			else		      return false;
-		}
-	} else if( operator === ">" ) {
-		if(parseFloat(feature) > parseFloat(value)) return true;
-		else 					    return false;
-	} else if( operator === "<" ) {
-		if(parseFloat(feature) > parseFloat(value)) return true;
-		else					    return false;
-	} else {return false;}
+    var operator = condition.split(" ")[0];
+    var value = condition.split(" ")[1];
+    //if the operator is >,<,>=,<= the value must be numeric
+    if( operator === ">=") {
+        if (parseFloat(feature) >= parseFloat(value)) return true;
+        else					      return false;
+    } else if( operator === "<=") {
+        if(parseFloat(feature) <= parseFloat(value)) return true;
+        else					     return false;
+    } else if( operator === "=" ) {
+        if (isNumeric(value)) {
+            if(parseFloat(feature) === parseFloat(value)) return true;
+            else					      return false;
+        } else {
+            if(feature === value) return true;
+            else		      return false;
+        }
+    } else if( operator === ">" ) {
+        if(parseFloat(feature) > parseFloat(value)) return true;
+        else 					    return false;
+    } else if( operator === "<" ) {
+        if(parseFloat(feature) > parseFloat(value)) return true;
+        else					    return false;
+    } else {return false;}
 }
 
 function _classify(node, attrs) {
-	if (node.isLeaf === true) {
-		var price = node.label.slice(1,-1).split("-");
-		//must check what to do if there are -inf or inf in price
-		var ret = (parseFloat(price[0]) + parseFloat(price[1]))/2;
-		return ret;
-	}
-	var currValue = attrs[parseInt(node.index) - 1];
-	console.log(currValue);
-	for(cond in node.conditions){
-		if(comparator(node.conditions[cond],currValue) === true) {
-			return (_classify(node.children[cond],attrs));
-		}
+    if (node.isLeaf === true) {
+        var price = node.label.slice(1,-1).split("-");
+        //must check what to do if there are -inf or inf in price
+        var ret = (parseFloat(price[0]) + parseFloat(price[1]))/2;
+        return ret;
+    }
+    var currValue = attrs[parseInt(node.index) - 1];
+    console.log(currValue);
+    for(cond in node.conditions){
+        if(comparator(node.conditions[cond],currValue) === true) {
+            return (_classify(node.children[cond],attrs));
+        }
 
-	}
-	return "Can't find class -- Please learn tree with more examples";
+    }
+    return "Can't find class -- Please learn tree with more examples";
 }
 
 function parseXML(xmlTree) {
-	//console.log("called parse XML");
-	var splittedXML = xmlTree.split("\n");
-	var xmlLength = splittedXML.length;
-	var i;
-	//console.log(xmlLength);
-	for(i = 0; i<xmlLength; i+=1) {
-		var symbols = splittedXML[i].trim().replace(/\s\s+/g,' ').replace("<","").replace(/.$/,"").match(/('[^']+'|[^=]+)/g);
-		var dispatcher = symbols[0].split(" ")[0].replace(/ /g,"");
-		//console.log(symbols);
-		if (dispatcher === "Test") {
-			var attribute = symbols[1].split(" ")[0].replace(/'/g,"").replace(/ /g,"");
-			var condition = symbols[3].split(" ")[0].replace(/'/g,"").replace(/ /g,"") + " " + symbols[5].replace(/'/g,"").replace(/ /g,"");
-			var index = attributeToIndex(attribute);
-			var leaf = false;
-			
-			if(Stack.length === 0) {
-				var tmp = new Node(attribute,leaf,index,"");
-				tmp.conditions.push(condition);
-				Stack.push(tmp);
-				//console.log(tmp);
-			} else {
-				//this is the equal condition
-				if(Stack[Stack.length - 1].label === attribute) {
-					Stack[Stack.length - 1].conditions.push(condition);
-				} else {
-				  	//this is a new node for the stack	
-					var tmp = new Node(attribute,leaf,index,"");
-					tmp.conditions.push(condition);
-					Stack.push(tmp);
-				}
-			}
+    //console.log("called parse XML");
+    var splittedXML = xmlTree.split("\n");
+    var xmlLength = splittedXML.length;
+    var i;
+    //console.log(xmlLength);
+    for(i = 0; i<xmlLength; i+=1) {
+        var symbols = splittedXML[i].trim().replace(/\s\s+/g,' ').replace("<","").replace(/.$/,"").match(/('[^']+'|[^=]+)/g);
+        var dispatcher = symbols[0].split(" ")[0].replace(/ /g,"");
+        //console.log(symbols);
+        if (dispatcher === "Test") {
+            var attribute = symbols[1].split(" ")[0].replace(/'/g,"").replace(/ /g,"");
+            var condition = symbols[3].split(" ")[0].replace(/'/g,"").replace(/ /g,"") + " " + symbols[5].replace(/'/g,"").replace(/ /g,"");
+            var index = attributeToIndex(attribute);
+            var leaf = false;
 
-		} else if (dispatcher === "/Test") {
-			var node = Stack.pop();
-			Stack[Stack.length - 1].children.push(node);
-		} else if (dispatcher === "/DecisionTree") {
-			//console.log("Parsed /DecisionTree");
-			var node = Stack.pop();
-			return tree = new Tree(node);
-		} else if (dispatcher === "Output") {
-			var leaf = true;
-			var index = 0;
-			var label = symbols[1].split(" ")[0].replace(/'/g,"");
-			var info = symbols[2].split(" ")[0].replace(/'/g,"");
-			var tmp = new Node(label,leaf,index,info);
-			Stack.push(tmp)
-		}
-	
+            if(Stack.length === 0) {
+                var tmp = new Node(attribute,leaf,index,"");
+                tmp.conditions.push(condition);
+                Stack.push(tmp);
+                //console.log(tmp);
+            } else {
+                //this is the equal condition
+                if(Stack[Stack.length - 1].label === attribute) {
+                    Stack[Stack.length - 1].conditions.push(condition);
+                } else {
+                    //this is a new node for the stack	
+                    var tmp = new Node(attribute,leaf,index,"");
+                    tmp.conditions.push(condition);
+                    Stack.push(tmp);
+                }
+            }
 
-	}
+        } else if (dispatcher === "/Test") {
+            var node = Stack.pop();
+            Stack[Stack.length - 1].children.push(node);
+        } else if (dispatcher === "/DecisionTree") {
+            //console.log("Parsed /DecisionTree");
+            var node = Stack.pop();
+            return tree = new Tree(node);
+        } else if (dispatcher === "Output") {
+            var leaf = true;
+            var index = 0;
+            var label = symbols[1].split(" ")[0].replace(/'/g,"");
+            var info = symbols[2].split(" ")[0].replace(/'/g,"");
+            var tmp = new Node(label,leaf,index,info);
+            Stack.push(tmp)
+        }
+
+
+    }
 
 }
 function saveYourValue(vl) {
-	chrome.storage.sync.set({"yourValue":vl}, function() {
-		if (chrome.runtime.error) {
-			console.log("Runtime error.")
-		}
-	});
+    chrome.storage.sync.set({"yourValue":vl}, function() {
+        if (chrome.runtime.error) {
+            console.log("Runtime error.")
+        }
+    });
 }
 
 //save the counter for the total encrypted ads
 function saveTotalEnc(enc) {
-	chrome.storage.sync.set({"total_enc":enc}, function() {
-		if (chrome.runtime.error) {
-			console.log("Runtime error.")
-		}
-	});
+    chrome.storage.sync.set({"total_enc":enc}, function() {
+        if (chrome.runtime.error) {
+            console.log("Runtime error.")
+        }
+    });
 }
 //save the counter for the total plaintext ads 
 function saveTotalPlain(pl) {
-	chrome.storage.sync.set({"total_plain":pl}, function() {
-		if (chrome.runtime.error) {
-			console.log("Runtime error");
-		}
-	});
+    chrome.storage.sync.set({"total_plain":pl}, function() {
+        if (chrome.runtime.error) {
+            console.log("Runtime error");
+        }
+    });
 }
 
 var treeXML_2 = null;
 function saveXML(d) {
-	treeXML_2 = d;
+    treeXML_2 = d;
 }
 
 //get the tree in xml format from the server 
 function getTree()
 {
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function () {
-		if (xhr.readyState == 4) { 
-			var data = xhr.responseText;
-			saveXML(data);
-		}
-	}
-	xhr.open('GET','DT/ParsedXML4.xml',true);
-	xhr.send(null);
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) { 
+            var data = xhr.responseText;
+            saveXML(data);
+        }
+    }
+    xhr.open('GET','DT/ParsedXML4.xml',true);
+    xhr.send(null);
 }
 
 function printTree(data)
 {
-	console.log(data);
+    console.log(data);
 }
 
 //remove the lines from the xml tree which contains only whitespaces
 function removeEmptyFields(arr) {
-	var arraylength = arr.length;
-	var ret = [];
-	for (var i =0; i < arraylength; i++) {
-		if(arr[i].length > 2)
-			ret.push(arr[i]);
-	}
-	return ret;
+    var arraylength = arr.length;
+    var ret = [];
+    for (var i =0; i < arraylength; i++) {
+        if(arr[i].length > 2)
+            ret.push(arr[i]);
+    }
+    return ret;
 }
 
 //this is used to check if the tree exists
 if(treeXML_2 === null) {
-	getTree();
+    getTree();
 }
 //cretae the advertiser keyword hashtable
 var keyword_url = chrome.extension.getURL('databases/keywords.csv');
 $.get(keyword_url,function(data){
-	var ad2key = data;
-	ad2key = ad2key.split("\n");
-	for(i in ad2key) {
-		var tmp = ad2key[i].replace(/"/g,"").split('\t');
-		if(publisherKeywordTable[tmp[0]] === undefined) publisherKeywordTable[tmp[0]] = [tmp[1]];
-		else						publisherKeywordTable[tmp[0]].push(tmp[1]);
-	}
-	delete publisherKeywordTable[""];
-	console.log(publisherKeywordTable);
+    var ad2key = data;
+    ad2key = ad2key.split("\n");
+    for(i in ad2key) {
+        var tmp = ad2key[i].replace(/"/g,"").split('\t');
+        if(publisherKeywordTable[tmp[0]] === undefined) publisherKeywordTable[tmp[0]] = [tmp[1]];
+        else						publisherKeywordTable[tmp[0]].push(tmp[1]);
+    }
+    delete publisherKeywordTable[""];
+    console.log(publisherKeywordTable);
 });
 
 //read the IABs file 
@@ -511,20 +511,20 @@ var IAB_url = chrome.extension.getURL('IABs/IABmap.csv');
 var IABs = null;
 
 $.get(IAB_url, function(data){
-	IABs = data;
-	//convert csv to array
-	IABs = IABs.split("\n");
-	IABs_tmp = [];
-	for(i in IABs) {
-		IABs_tmp.push(IABs[i].split("\t"));
+    IABs = data;
+    //convert csv to array
+    IABs = IABs.split("\n");
+    IABs_tmp = [];
+    for(i in IABs) {
+        IABs_tmp.push(IABs[i].split("\t"));
 
-	}
-	IABs = {};
-	//convert array to dictionary
-	for(i in IABs_tmp) {
-		IABs[IABs_tmp[i][0]] = IABs_tmp[i][2];
-	}
-	//console.log(IABs);
+    }
+    IABs = {};
+    //convert array to dictionary
+    for(i in IABs_tmp) {
+        IABs[IABs_tmp[i][0]] = IABs_tmp[i][2];
+    }
+    //console.log(IABs);
 });
 
 var adDB = [];
@@ -533,107 +533,107 @@ var adDB_url = chrome.extension.getURL('databases/services.json');
 
 //read and parse the database, keep only the ad exchanges
 $.getJSON(adDB_url, function(data){
-	adDB_tmp = data.categories.Advertising;
-	for(x in adDB_tmp) {
-		for(i in adDB_tmp[x]) {
-			for(sites in adDB_tmp[x][i]) {
-				for(url in adDB_tmp[x][i][sites]){
-					adDB.push(adDB_tmp[x][i][sites][url]);
-				}
-			}
-		}
-		
-	}
-	console.log(adDB);
+    adDB_tmp = data.categories.Advertising;
+    for(x in adDB_tmp) {
+        for(i in adDB_tmp[x]) {
+            for(sites in adDB_tmp[x][i]) {
+                for(url in adDB_tmp[x][i][sites]){
+                    adDB.push(adDB_tmp[x][i][sites][url]);
+                }
+            }
+        }
+
+    }
+    console.log(adDB);
 });
 
 chrome.storage.sync.get('yourValue', function(vl) {
-	if (typeof vl.yourValue === 'undefined') {
-		yourValue = 0;
-	} else {
-		yourValue = vl.yourValue;
-	}
+    if (typeof vl.yourValue === 'undefined') {
+        yourValue = 0;
+    } else {
+        yourValue = vl.yourValue;
+    }
 });
 
 chrome.storage.sync.get('total_enc', function(enc) {
-	if (typeof enc.total_enc === 'undefined') {
-		total_enc = 0;
-	} else {
-		total_enc = enc.total_enc
-	}
+    if (typeof enc.total_enc === 'undefined') {
+        total_enc = 0;
+    } else {
+        total_enc = enc.total_enc
+    }
 });
 
 chrome.storage.sync.get('total_plain', function(pl){
-	if (typeof pl.total_plain === 'undefined') {
-		total_plain = 0;
-	} else {
-		total_plain = pl.total_plain;
-	}
+    if (typeof pl.total_plain === 'undefined') {
+        total_plain = 0;
+    } else {
+        total_plain = pl.total_plain;
+    }
 });
 
 //this are for indexedDB
 if(!('indexedDB' in window)) {
-	console.log("This browser doent support IndexedDB");
+    console.log("This browser doent support IndexedDB");
 } else {
-	console.log("This browser support indexedDB");
+    console.log("This browser support indexedDB");
 }
 
 var openRequest = indexedDB.open("URL2",1);
 var db;
 
 openRequest.onupgradeneeded = function(e) {
-	console.log("running onupgradeneeded");
-	var thisDB = e.target.result;
+    console.log("running onupgradeneeded");
+    var thisDB = e.target.result;
 
-	if(!thisDB.objectStoreNames.contains("URLarray")) {
-		console.log("creating the new db");
-		thisDB.createObjectStore("URLarray",{autoIncrement:true});
-	}
+    if(!thisDB.objectStoreNames.contains("URLarray")) {
+        console.log("creating the new db");
+        thisDB.createObjectStore("URLarray",{autoIncrement:true});
+    }
 }
 
 openRequest.onsuccess = function(e) {
-	console.log("running onsuccess");
-	db = e.target.result;
-	//tx = db.transaction(["URL_array"],"readwrite");
-	//store = tx.objectStore("URL_array");
+    console.log("running onsuccess");
+    db = e.target.result;
+    //tx = db.transaction(["URL_array"],"readwrite");
+    //store = tx.objectStore("URL_array");
 }
 
 function addPrices(e) {
-	console.log("adding to indexedDB");
+    console.log("adding to indexedDB");
 
-	var tx = db.transaction(["URLarray"],"readwrite");
-	var store = tx.objectStore("URLarray");
-	var req = store.add(e);
-	//console.log(req);	
-	req.onsuccess = function(ev) {
-		console.log("We did it!!!!");
-	}
-	req.onerror = function(ev) {
-		console.log(e);
-		console.log("Error",ev.target.error.name);
-		store.put(e);
-	}
+    var tx = db.transaction(["URLarray"],"readwrite");
+    var store = tx.objectStore("URLarray");
+    var req = store.add(e);
+    //console.log(req);	
+    req.onsuccess = function(ev) {
+        console.log("We did it!!!!");
+    }
+    req.onerror = function(ev) {
+        console.log(e);
+        console.log("Error",ev.target.error.name);
+        store.put(e);
+    }
 }
 
 function clearPricesArray() {	
-	var tx = db.transaction(["URLarray"],"readwrite");
-	var store = tx.objectStore("URLarray");
-	store.clear();
+    var tx = db.transaction(["URLarray"],"readwrite");
+    var store = tx.objectStore("URLarray");
+    store.clear();
 }
 
 function printPricesArray() {
 
-	var tx = db.transaction(["URLarray"],"readwrite");
-	var store = tx.objectStore("URLarray");	
-	//var ob = store.get("urlarr");
-	var ob = store.getAll();
-	//console.log(ob);
-	//result is an array containg tuples of {timestamp, urltoprice}
-	//the urltoprices uses -> delimiters to seperate the url parameters frin the actual prices
-	ob.onsuccess = function(ev) {
-		console.log(ob.result);
-	}
-	//console.log(ob);
+    var tx = db.transaction(["URLarray"],"readwrite");
+    var store = tx.objectStore("URLarray");	
+    //var ob = store.get("urlarr");
+    var ob = store.getAll();
+    //console.log(ob);
+    //result is an array containg tuples of {timestamp, urltoprice}
+    //the urltoprices uses -> delimiters to seperate the url parameters frin the actual prices
+    ob.onsuccess = function(ev) {
+        console.log(ob.result);
+    }
+    //console.log(ob);
 }
 
 //here ends the indexedDB
