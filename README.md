@@ -47,3 +47,5 @@ Before Downloading please read and accept our <a hred="https://github.com/panpap
             <figcaption>Figure 3. The plugin in action.</figcaption>
         </figure>
 
+## Bug Report
+If you encountered any unexpected behaviour please report using this form: https://docs.google.com/forms/d/e/1FAIpQLScS42vjYmo-bIVJ9Sv04WOD-eykFWitjNn0sYUdHsO43LVhyA/viewform?usp=sf\_link
