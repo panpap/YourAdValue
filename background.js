@@ -253,8 +253,13 @@ function getOperatingSystem() {
 //takes as argument the domain and returns the ad exchange
 function getPublisher(url) {
     for(var ex in adDB){
-        if(url.includes(adDB[ex]))
-            return adDB[ex];
+        if(url.includes(adDB[ex])) {
+            if(adDB[ex].includes("openx"))              return "OpenX";
+            else if(adDB[ex].includes("google"))        return "Google";
+            else if(adDB[ex].includes("pulsepoint"))    return "PulsePoint";    
+            else if(adDB[ex].includes("rubicon"))       return "Rubicon";    
+            else                                        return adDB[ex];
+        }
     }
     return "undef";
 }
