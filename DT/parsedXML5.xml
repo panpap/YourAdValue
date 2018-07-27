@@ -1,0 +1,1873 @@
+<?xml version='1.0' encoding='UTF-8'?> 
+<DecisionTree type='DT_allfeatures_NOCITY_NODISPOSITIVO_NOOS_NOTRAFICO'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='0'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='FORMATO' op='=' val='320x50'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(18404.0/8724.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(282.0/57.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(10234.0)'> 
+</Test> 
+</Test> 
+<Test attr='FORMATO' op='=' val='320x480'> 
+<Output decision=''(2.01325-2.49392]'' inf='(9921.0/1008.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='300x250'> 
+<Output decision=''(2.01325-2.49392]'' inf='(24623.0/10307.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='728x90'> 
+<Output decision=''(2.01325-2.49392]'' inf='(4631.0/1048.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='768x1024'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(348.0/157.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.01325-2.49392]'' inf='(54.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.49392-inf)'' inf='(3.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.01325-2.49392]'' inf='(69.0/19.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(2.01325-2.49392]'' inf='(3158.0/267.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Test attr='FORMATO' op='=' val='320x50'> 
+<Output decision=''(1.152675-2.01325]'' inf='(4.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='320x480'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='300x250'> 
+<Output decision=''(2.01325-2.49392]'' inf='(13213.0/7.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='728x90'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='768x1024'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Test attr='FORMATO' op='=' val='320x50'> 
+<Output decision=''(-inf-1.152675]'' inf='(546.0/9.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='320x480'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='300x250'> 
+<Output decision=''(2.49392-inf)'' inf='(14.0/5.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='728x90'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='768x1024'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(2.01325-2.49392]'' inf='(20.0/6.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(2.01325-2.49392]'' inf='(37.0/12.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Test attr='FORMATO' op='=' val='320x50'> 
+<Output decision=''(2.01325-2.49392]'' inf='(40.0/3.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='320x480'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='300x250'> 
+<Output decision=''(2.49392-inf)'' inf='(4.0/1.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='728x90'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='768x1024'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(-inf-1.152675]'' inf='(5.0/2.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Test attr='FORMATO' op='=' val='320x50'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(-inf-1.152675]'' inf='(476.0/248.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(2.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(-inf-1.152675]'' inf='(2.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.01325-2.49392]'' inf='(3.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(-inf-1.152675]'' inf='(4955.0/2685.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(-inf-1.152675]'' inf='(55.0/20.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(-inf-1.152675]'' inf='(115.0/58.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(-inf-1.152675]'' inf='(13.0/5.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(-inf-1.152675]'' inf='(26.0/9.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.49392-inf)'' inf='(12.0/4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.01325-2.49392]'' inf='(22.0/5.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(1.152675-2.01325]'' inf='(4.0/1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(-inf-1.152675]'' inf='(1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(-inf-1.152675]'' inf='(5.0/1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='FORMATO' op='=' val='320x480'> 
+<Output decision=''(2.01325-2.49392]'' inf='(1.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='300x250'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(12165.0/6274.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(1.152675-2.01325]'' inf='(12.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(127.0/1.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(1.152675-2.01325]'' inf='(94.0/33.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(1.152675-2.01325]'' inf='(11601.0/5596.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.01325-2.49392]'' inf='(4482.0/1167.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.01325-2.49392]'' inf='(179.0/62.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(-inf-1.152675]'' inf='(787.0/375.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(1.152675-2.01325]'' inf='(27.0/7.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.49392-inf)'' inf='(7.0/1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.49392-inf)'' inf='(161.0/55.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(-inf-1.152675]'' inf='(74.0/10.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(-inf-1.152675]'' inf='(1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(-inf-1.152675]'' inf='(4.0/1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='FORMATO' op='=' val='728x90'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(717.0/173.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(-inf-1.152675]'' inf='(12.0/3.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(12.0/2.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(-inf-1.152675]'' inf='(13.0/4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(-inf-1.152675]'' inf='(3708.0/2239.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(-inf-1.152675]'' inf='(273.0/114.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(1.152675-2.01325]'' inf='(48.0/13.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(1.152675-2.01325]'' inf='(21.0/4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(1.152675-2.01325]'' inf='(10.0/4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(-inf-1.152675]'' inf='(7.0/4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(1.152675-2.01325]'' inf='(26.0/13.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(-inf-1.152675]'' inf='(23.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='FORMATO' op='=' val='768x1024'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Output decision=''(2.49392-inf)'' inf='(3370.0/7.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(2.49392-inf)'' inf='(1889.0/55.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.49392-inf)'' inf='(87.0/5.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.49392-inf)'' inf='(1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Test attr='FORMATO' op='=' val='320x50'> 
+<Output decision=''(2.49392-inf)'' inf='(8.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='320x480'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='300x250'> 
+<Output decision=''(2.01325-2.49392]'' inf='(6.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='728x90'> 
+<Output decision=''(2.01325-2.49392]'' inf='(4.0/1.0)'> 
+</Test> 
+<Test attr='FORMATO' op='=' val='768x1024'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.01325-2.49392]'' inf='(148.0/52.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(2.01325-2.49392]'' inf='(278.0/9.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Output decision=''(2.01325-2.49392]'' inf='(610.0/154.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(2.01325-2.49392]'' inf='(418.0/96.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.49392-inf)'' inf='(30.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='0'> 
+<Test attr='FORMATO' op='=' val='320x50'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='2'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='1'> 
+<Output decision=''(2.49392-inf)'' inf='(11550.0/2596.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='1'> 
+<Output decision=''(2.49392-inf)'' inf='(17958.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(6.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(21993.0/9575.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='2'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(-inf-1.152675]'' inf='(125296.0/29236.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(-inf-1.152675]'' inf='(8843.0/406.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(275.0/108.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(-inf-1.152675]'' inf='(7702.0/106.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(826.0/223.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(-inf-1.152675]'' inf='(602.0/172.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(225.0/40.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(490.0/132.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Output decision=''(2.49392-inf)'' inf='(3413.0/16.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Output decision=''(-inf-1.152675]'' inf='(4.0/1.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(284.0/108.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(236.0/138.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(1006.0/233.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(2994.0/1527.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(2405.0/1575.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(-inf-1.152675]'' inf='(3454.0/1964.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Output decision=''(2.49392-inf)'' inf='(102.0/2.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(15.0/4.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(52.0/18.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(2957.0/911.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Output decision=''(-inf-1.152675]'' inf='(2462.0/58.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(238.0/93.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(144.0/45.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Output decision=''(2.49392-inf)'' inf='(23.0/10.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(4.0/1.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(-inf-1.152675]'' inf='(19.0/9.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(-inf-1.152675]'' inf='(11.0/1.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Output decision=''(2.49392-inf)'' inf='(32.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(8.0/2.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(23.0/4.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(28.0/14.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(-inf-1.152675]'' inf='(41.0/5.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(70.0/9.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.49392-inf)'' inf='(6.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(1.152675-2.01325]'' inf='(44.0/21.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Output decision=''(-inf-1.152675]'' inf='(2.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Output decision=''(2.01325-2.49392]'' inf='(29.0/3.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Output decision=''(2.49392-inf)'' inf='(6.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.01325-2.49392]'' inf='(38.0/7.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.49392-inf)'' inf='(14.0/3.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(1.152675-2.01325]'' inf='(1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(-inf-1.152675]'' inf='(2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(24083.0/4005.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(-inf-1.152675]'' inf='(46.0/27.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.49392-inf)'' inf='(81.0/2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(2.49392-inf)'' inf='(127.0/26.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(-inf-1.152675]'' inf='(898.0/7.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(1.152675-2.01325]'' inf='(4.0/2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.49392-inf)'' inf='(26.0/2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.49392-inf)'' inf='(4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Output decision=''(1.152675-2.01325]'' inf='(247.0/52.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.49392-inf)'' inf='(4.0/1.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.01325-2.49392]'' inf='(16.0/7.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(2.49392-inf)'' inf='(3190.0/1356.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.49392-inf)'' inf='(10.0/4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.01325-2.49392]'' inf='(71.0/29.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(1.152675-2.01325]'' inf='(14.0/5.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(-inf-1.152675]'' inf='(30.0/9.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(-inf-1.152675]'' inf='(2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.01325-2.49392]'' inf='(14.0/6.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(1.152675-2.01325]'' inf='(6.0/2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Output decision=''(2.49392-inf)'' inf='(1821.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='FORMATO' op='=' val='320x480'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='2'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.49392-inf)'' inf='(9157.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(418.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(771.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='2'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='3'> 
+<Output decision=''(2.49392-inf)'' inf='(1408.0/285.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='3'> 
+<Output decision=''(1.152675-2.01325]'' inf='(7806.0/1820.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(1.152675-2.01325]'' inf='(1008.0/93.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(1720.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(7618.0/156.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(602.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='FORMATO' op='=' val='300x250'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='3'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='2'> 
+<Output decision=''(2.49392-inf)'' inf='(9593.0/2.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='2'> 
+<Output decision=''(-inf-1.152675]'' inf='(6489.0/2398.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(19119.0/3769.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(2755.0/513.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='3'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(12594.0/6697.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(10687.0/5829.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(17952.0/7334.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.49392-inf)'' inf='(1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(694.0/343.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(744.0/178.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.49392-inf)'' inf='(848.0/408.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.01325-2.49392]'' inf='(6739.0/283.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(11.0/3.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(22.0/11.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(13.0/2.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(27.0/7.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.49392-inf)'' inf='(2.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(212.0/30.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(215.0/1.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.49392-inf)'' inf='(21.0/6.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.49392-inf)'' inf='(15.0/4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Output decision=''(1.152675-2.01325]'' inf='(901.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.49392-inf)'' inf='(2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(914.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(722.0/1.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='3'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.49392-inf)'' inf='(579.0/11.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(8590.0/5332.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(23.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.49392-inf)'' inf='(65.0/18.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(1.152675-2.01325]'' inf='(9824.0/5899.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.49392-inf)'' inf='(10438.0/6343.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.49392-inf)'' inf='(289.0/31.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(1.152675-2.01325]'' inf='(782.0/275.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(1.152675-2.01325]'' inf='(116.0/68.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.49392-inf)'' inf='(7.0/1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.49392-inf)'' inf='(117.0/31.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(-inf-1.152675]'' inf='(21.0/6.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(-inf-1.152675]'' inf='(19.0/4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='3'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(6472.0/3372.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(1.152675-2.01325]'' inf='(8.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(19.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(13098.0/6944.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(61.0/31.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(118.0/30.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(1.152675-2.01325]'' inf='(19716.0/7187.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(535.0/195.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(1029.0/96.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(2588.0/243.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(184.0/101.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(117.0/47.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.49392-inf)'' inf='(126.0/43.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(1.152675-2.01325]'' inf='(953.0/381.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(285.0/91.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Output decision=''(1.152675-2.01325]'' inf='(417.0/29.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(44.0/20.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(-inf-1.152675]'' inf='(8.0/3.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(12.0/6.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.49392-inf)'' inf='(279.0/75.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(-inf-1.152675]'' inf='(105.0/27.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(1.152675-2.01325]'' inf='(4.0/2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(-inf-1.152675]'' inf='(3.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Output decision=''(2.49392-inf)'' inf='(6633.0/461.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(2.49392-inf)'' inf='(7337.0/107.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.49392-inf)'' inf='(84.0/3.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.49392-inf)'' inf='(9.0/4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(2.49392-inf)'' inf='(27.0/4.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(110.0/2.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(195.0/34.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(2.49392-inf)'' inf='(213.0/1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(1.152675-2.01325]'' inf='(3.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='3'> 
+<Output decision=''(2.49392-inf)'' inf='(787.0/11.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='3'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Output decision=''(2.01325-2.49392]'' inf='(1151.0/288.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(368.0/51.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(2.01325-2.49392]'' inf='(326.0/47.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.49392-inf)'' inf='(304.0/7.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.49392-inf)'' inf='(51.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='FORMATO' op='=' val='728x90'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='2'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.49392-inf)'' inf='(1940.0/9.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Output decision=''(2.49392-inf)'' inf='(302.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='1'> 
+<Output decision=''(-inf-1.152675]'' inf='(13.0/5.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='1'> 
+<Output decision=''(2.49392-inf)'' inf='(27.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(258.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='2'> 
+<Test attr='AD-EXCHANGES' op='=' val='OpenX'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='3'> 
+<Output decision=''(2.49392-inf)'' inf='(928.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='3'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Output decision=''(1.152675-2.01325]'' inf='(1534.0/911.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(2.49392-inf)'' inf='(266.0/31.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(1.152675-2.01325]'' inf='(4.0/2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(2.49392-inf)'' inf='(1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='3'> 
+<Output decision=''(-inf-1.152675]'' inf='(1778.0/948.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='3'> 
+<Output decision=''(1.152675-2.01325]'' inf='(498.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(2.49392-inf)'' inf='(286.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.49392-inf)'' inf='(2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(54.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Output decision=''(1.152675-2.01325]'' inf='(2537.0/669.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(2.01325-2.49392]'' inf='(219.0/62.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.49392-inf)'' inf='(2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(2.01325-2.49392]'' inf='(1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Output decision=''(2.01325-2.49392]'' inf='(3877.0/1492.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Output decision=''(2.49392-inf)'' inf='(184.0/29.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.49392-inf)'' inf='(2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.49392-inf)'' inf='(1.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(1.152675-2.01325]'' inf='(320.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Google'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(2237.0/475.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.01325-2.49392]'' inf='(766.0/476.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(-inf-1.152675]'' inf='(11.0/4.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Output decision=''(-inf-1.152675]'' inf='(55.0/20.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(1.152675-2.01325]'' inf='(14.0/3.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(3305.0/1972.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(-inf-1.152675]'' inf='(7578.0/4667.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(-inf-1.152675]'' inf='(3165.0/2156.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(-inf-1.152675]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(1.152675-2.01325]'' inf='(1417.0/485.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(115.0/56.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(80.0/2.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(-inf-1.152675]'' inf='(27.0/6.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(28.0/6.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(76.0/30.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(36.0/9.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(1.152675-2.01325]'' inf='(3.0/1.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Output decision=''(-inf-1.152675]'' inf='(14.0/3.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Output decision=''(1.152675-2.01325]'' inf='(28.0/11.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(16.0/6.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(17.0/3.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(-inf-1.152675]'' inf='(94.0/22.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(-inf-1.152675]'' inf='(13.0/2.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='PulsePoint'> 
+<Output decision=''(2.49392-inf)'' inf='(849.0/8.0)'> 
+</Test> 
+<Test attr='AD-EXCHANGES' op='=' val='Rubicon'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Test attr='CATEGORIA' op='=' val='IAB1'> 
+<Output decision=''(2.01325-2.49392]'' inf='(302.0/89.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB7'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB12'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='4'> 
+<Output decision=''(2.49392-inf)'' inf='(22.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='4'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(24.0/7.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Output decision=''(2.49392-inf)'' inf='(19.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB17'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB19'> 
+<Output decision=''(2.49392-inf)'' inf='(75.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB18'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB13'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB3'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB16'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB9'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB8'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB15'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB11'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='#N/A'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB5'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB20'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+<Test attr='CATEGORIA' op='=' val='IAB6'> 
+<Output decision=''(2.01325-2.49392]'' inf='(0.0)'> 
+</Test> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(174.0/2.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='FORMATO' op='=' val='768x1024'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='3'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='2'> 
+<Output decision=''(2.49392-inf)'' inf='(328.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='2'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(2.49392-inf)'' inf='(0.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.49392-inf)'' inf='(186.0/51.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(3.0)'> 
+</Test> 
+</Test> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='3'> 
+<Test attr='DIA-DE-LA-SEMANA' op='<=' val='5'> 
+<Output decision=''(1.152675-2.01325]'' inf='(361.0/15.0)'> 
+</Test> 
+<Test attr='DIA-DE-LA-SEMANA' op='>' val='5'> 
+<Test attr='RANGO-HORAS' op='=' val='12am-9am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(333.0/117.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='9am-6pm'> 
+<Output decision=''(2.01325-2.49392]'' inf='(40.0)'> 
+</Test> 
+<Test attr='RANGO-HORAS' op='=' val='6pm-12am'> 
+<Output decision=''(1.152675-2.01325]'' inf='(0.0)'> 
+</Test>
+</Test> 
+</Test> 
+</Test>  
+</Test> 
+</DecisionTree> 
