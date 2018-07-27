@@ -126,6 +126,7 @@ function intercept()
                             //and run classification on the DT
                             //in order to find out the prediction about the price
                             console.log("URL:"+curr_tab);
+                            var fallback_price = yourValue / (total_plain + total_enc);
                             var features = getFeatures(info);
                             //if we have not create the DT yet create it
                             if (decisionTree === null) decisionTree = parseXML(treeXML_2);
@@ -150,7 +151,9 @@ function intercept()
                                 //price wasn't predicted
                                 total_enc = total_enc + 1;
                                 session_enc = session_enc + 1;
-                                saveTotalEnc(total_enc);
+                                saveTotalEnc(total_enc);                               
+                                yourValue = yourValue + calculatePrice(parseFloat(fallback_price));
+                                session_value = sessionvalue + calculatePrice(parseFloat(fallback_price));
                             }
                         });
                 }
@@ -384,22 +387,35 @@ function parseXML(xmlTree) {
     for(i = 0; i<xmlLength; i+=1) {
         var symbols = splittedXML[i].trim().replace(/\s\s+/g,' ').replace("<","").replace(/.$/,"").match(/('[^']+'|[^=]+)/g);
         var dispatcher = symbols[0].split(" ")[0].replace(/ /g,"");
-        //console.log(symbols);
+        //console.log(i +" "+ symbols);
         if (dispatcher === "Test") {
             var attribute = symbols[1].split(" ")[0].replace(/'/g,"").replace(/ /g,"");
             var condition = symbols[3].split(" ")[0].replace(/'/g,"").replace(/ /g,"") + " " + symbols[5].replace(/'/g,"").replace(/ /g,"");
             var index = attributeToIndex(attribute);
             var leaf = false;
-
+            //console.log(Stack.length);
             if(Stack.length === 0) {
                 var tmp = new Node(attribute,leaf,index,"");
                 tmp.conditions.push(condition);
                 Stack.push(tmp);
-                //console.log(tmp);
+               // console.log(tmp);
             } else {
                 //this is the equal condition
                 if(Stack[Stack.length - 1].label === attribute) {
-                    Stack[Stack.length - 1].conditions.push(condition);
+                    //temporary fix in case where the attribute is DIA-DE-LA-SEMANA and the next node is again DIA-DE-LA-SEMANA
+                    //will remove the if ...else and keep only the one line in else condition
+                    if(attribute === "DIA-DE-LA-SEMANA") {
+                            if(Stack[Stack.length - 1].conditions[0].split(" ")[0] === condition.split(" ")[0]) {
+                                var tmp = new Node(attribute,leaf,index,"");
+                                tmp.conditions.push(condition);
+                                Stack.push(tmp);
+                            }
+                            else {
+                                Stack[Stack.length - 1].conditions.push(condition);
+                            }
+                    } else { 
+                        Stack[Stack.length - 1].conditions.push(condition);
+                    }
                 } else {
                     //this is a new node for the stack	
                     var tmp = new Node(attribute,leaf,index,"");
@@ -409,8 +425,10 @@ function parseXML(xmlTree) {
             }
 
         } else if (dispatcher === "/Test") {
+            //if(Stack.length !== 1) {
             var node = Stack.pop();
-            Stack[Stack.length - 1].children.push(node);
+            //console.log(node);
+            Stack[Stack.length - 1].children.push(node); 
         } else if (dispatcher === "/DecisionTree") {
             //console.log("Parsed /DecisionTree");
             var node = Stack.pop();
@@ -468,7 +486,8 @@ function getTree()
             saveXML(data);
         }
     }
-    xhr.open('GET','DT/ParsedXML4.xml',true);
+    //xhr.open('GET','DT/simplifiedDT.xml',true);
+    xhr.open('GET','DT/parsedXML5.xml',true);
     xhr.send(null);
 }
 
