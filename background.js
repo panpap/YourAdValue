@@ -142,7 +142,8 @@ function intercept()
                                 session_enc = session_enc + 1;
                                 saveTotalEnc(total_enc);
                                 yourValue = yourValue + calculatePrice(parseFloat(price));
-                                session_value = sessionvalue + calculatePrice(parseFloat(price));
+				saveYourValue(yourValue);
+                                session_value = session_value + calculatePrice(parseFloat(price));
                                 //could add the features I want ot donate seperated by the '|' delimiter
                                 var urltoprice = info.url+" -> "+res[0]+"->"+res[1];
                             } else {
@@ -153,7 +154,8 @@ function intercept()
                                 session_enc = session_enc + 1;
                                 saveTotalEnc(total_enc);                               
                                 yourValue = yourValue + calculatePrice(parseFloat(fallback_price));
-                                session_value = sessionvalue + calculatePrice(parseFloat(fallback_price));
+				saveYourValue(yourValue);
+                                session_value = session_value + calculatePrice(parseFloat(fallback_price));
                             }
                         });
                 }
