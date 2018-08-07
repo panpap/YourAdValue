@@ -86,9 +86,18 @@ body {
     background-color: #e8e9f3;
 }
 
+#bug {
+    float: right;
+    margin: 4px;
+}
+
+#questionaire {
+    float: right;
+    margin: 4px;
+}
 #switch {
-    width:330px;
-    min-width: 99%;
+    width:280px;
+    min-width: 85%;
     background-color: #a6a6a8;
     /*background-color: #20c3cf;*/
     border: none;
@@ -122,8 +131,8 @@ body {
 
 #desc_key {
     position: relative;
-    float: right;
-    width: 330px;
+    float: left;
+    width: 280px;
     height: 34;
     /*background-color: #20c3cf;*/
     background-color: #a6a6a8;

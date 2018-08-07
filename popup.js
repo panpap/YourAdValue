@@ -78,41 +78,11 @@ document.getElementById("switch").addEventListener("click",function(){
 		//document.getElementById('DisTag').innerHTML = '<h2>Disable Plugin</h2>';
 	}
 });
-/*
-function EnableDonations() {
-    //return "<label align='left' id='switch'>"+
-  	return	   "<input type='button' value='Enable Donations' id='switch2'>"//+
-  		   //"<span class='slider round'></span>"+
-		   //"</label>" + "<div id='DisTag'><h2>Enable plugin</h2></div>"
-}
-function disableDonations() {
-    //return "<label align='left' id='switch'>"+
-  	return	   "<input type='button' value='Disable Donations' id='switch2'>"//+
-  		   //"<span class='slider round'></span>"+
-		   //"</label>" + "<div id='DisTag'><h2>Disable plugin</h2></div>"
-}
-//end of enabling and disabling
 
-var disableDonation = chrome.extension.getBackgroundPage().disableDonation; //enableValue holds if the plugin is enabled or disabled
-
-if(disableDonation === 0)
-	document.write(disableDonations())
-else
-	document.write(EnableDonations())
-
-document.getElementById("switch2").addEventListener("click",function(){
-	var dis = chrome.extension.getBackgroundPage().disableDonation;
-	if(dis === 0) {
-		chrome.extension.getBackgroundPage().disableDonations();
-		document.getElementById('switch2').value = 'Enable Donations';
-		//document.getElementById('DisTag').innerHTML = '<h2>Enable Plugin</h2>';
-	}
-	else {	
-		chrome.extension.getBackgroundPage().enableDonations();
-		document.getElementById('switch2').value = 'Disable Donations';
-		//document.getElementById('DisTag').innerHTML = '<h2>Disable Plugin</h2>';
-	}
-});*/
+document.write("<input type='image' src='./images/questionaire.png' title='Complete our questionnaire' width=30 height=34 id='questionaire'>")
+document.getElementById('questionaire').addEventListener("click", function() {
+    chrome.tabs.create({url:"https://goo.gl/forms/YEXBrCAJ076SeSZ62"});
+});
 
 function openDescription() {
    chrome.browserAction.onClicked.addListener(function(activeTab){
@@ -125,6 +95,16 @@ document.getElementById('desc_key').addEventListener("click",function(){
   	   chrome.tabs.create({ url: chrome.extension.getURL('description.html') }); 
 });
 
+document.write("<input type='image' src='./images/bug.png' title='Report a bug' width=30 height=34 id='bug'>")
+document.getElementById('bug').addEventListener("click", function() {
+    chrome.tabs.create({url:"https://docs.google.com/forms/d/e/1FAIpQLScS42vjYmo-bIVJ9Sv04WOD-eykFWitjNn0sYUdHsO43LVhyA/viewform"});
+});
+/*
+document.write("<input type='image' src='./images/questionaire.png' width=34 height=34 id='questionaire'>")
+document.getElementById('questionaire').addEventListener("click", function() {
+    chrome.tabs.create({url:"https://goo.gl/forms/YEXBrCAJ076SeSZ62"});
+});
+*/
 chrome.browserAction.setBadgeText({
 	text: ""
 });
