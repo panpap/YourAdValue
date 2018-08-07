@@ -127,7 +127,8 @@ function intercept()
                             //in order to find out the prediction about the price
                             console.log("URL:"+curr_tab);
                             var fallback_price = yourValue / (total_plain + total_enc);
-                            var features = getFeatures(info);
+                            var features = getFeatures(info,curr_tab);
+                            console.log(features);
                             //if we have not create the DT yet create it
                             if (decisionTree === null) decisionTree = parseXML(treeXML_2);
                             //predict the price
@@ -182,22 +183,26 @@ $.getJSON("http://www.ip-api.com/json",function(data) {
     console.log("User's town: "+ user_location+"User's country: "+country);
 });
 
-function getFeatures(info) {
+function getFeatures(info,curr_tab) {
 
     var params = info.url.substring(info.url.indexOf('?')+1);
     var winnerDSP = info.url.split('?')[0];
 
-    return user_location+"|"+ getTrafficType()+ "|" + getHourOfDay()+"|" + getDay() +"|"+ getPlatform()+"|"+ getFormat(params)+"|"+getOperatingSystem()+"|"+getPublisher(winnerDSP)+"|"+getCategoria(info);
+    return user_location+"|"+ getTrafficType()+ "|" + getHourOfDay()+"|" + getDay() +"|"+ getPlatform()+"|"+ getFormat(params)+"|"+getOperatingSystem()+"|"+getPublisher(winnerDSP)+"|"+getCategoria(curr_tab);
 }
 
 //return the categor
 function getCategoria(info) {
-    var domain = info.url.split('?')[0];
+    var domain = info.split('?')[0];
+
+    //console.log("CATEGORIA:"+domain);
     var stripped_domain = domain.match(/^(https?\:\/\/)?(?:www\.)?([^\/?#]+)(?:[\/?#]|$)/i);
-    if(IABs[stripped_domain[2]] !== "undefined") {
+    //console.log(stripped_domain[2]);
+    //console.log(IABs[stripped_domain[2]] === undefined);
+    if(IABs[stripped_domain[2]] !== undefined) {
         return IABs[stripped_domain[2]];
     } else {
-        return "NaN";
+        return "#N/A";
     }
 }
 
@@ -228,7 +233,8 @@ function getHourOfDay() {
 function getFormat(urlParams) {
     if(urlParams === null) return "undef";
     var paramList = urlParams.split("&");
-    var adSize = "undef";
+    var adSize = "320x50";   //this is the smallest possiple resolution, if you don't find any suitabe resolution return thr smallest
+                             //this way we might underestimate the value of an ad but we still report results relative to the user
     for(i in paramList) {
         var parts = paramList[i].split('=');
         if(parts[0] === "size" || parts[0] === "adsize" || parts[0] === "sz" || parts[0] === "res" || parts[0] === "dims")  return parts[1];
