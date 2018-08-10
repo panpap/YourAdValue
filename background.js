@@ -198,7 +198,8 @@ function getCategoria(info) {
 
     //console.log("CATEGORIA:"+domain);
     var stripped_domain = domain.match(/^(https?\:\/\/)?(?:www\.)?([^\/?#]+)(?:[\/?#]|$)/i);
-    //console.log(stripped_domain[2]);
+    console.log(stripped_domain[2]);
+    if ((stripped_domain[2].split('.').length - 1) < 2 ) stripped_domain[2] = "www."+stripped_domain[2]; //if we stripped the domain and it's not an api we add the www. 
     //console.log(IABs[stripped_domain[2]] === undefined);
     if(IABs[stripped_domain[2]] !== undefined) {
         return IABs[stripped_domain[2]];
