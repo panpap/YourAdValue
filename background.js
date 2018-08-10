@@ -133,6 +133,7 @@ function intercept()
                             if (decisionTree === null) decisionTree = parseXML(treeXML_2);
                             //predict the price
                             var price = classify(decisionTree._root,features);
+                            console.log(price);
                             if (isNumeric(price)) {
                                 //we found a predicted price
                                 var timestamp = new Date().getTime();
@@ -374,16 +375,28 @@ function comparator(condition, feature) {
 }
 
 function _classify(node, attrs) {
+    //console.log(node.isLeaf);
     if (node.isLeaf === true) {
         var price = node.label.slice(1,-1).split("-");
-        //must check what to do if there are -inf or inf in price
-        var ret = (parseFloat(price[0]) + parseFloat(price[1]))/2;
+        //console.log(price);
+        
+        //TO DO - CHECK THE PRICE IF IS INF
+        //console.log(price[0]+" "+price[1]);
+        if(price.length === 3) return parseFloat(price[2])/2; //the price if in range -inf to value
+        else {
+            if(isNumeric(price[1])) //if the second value of the array is numeric then the price is in range value1 to value
+                var ret = (parseFloat(price[0]) + parseFloat(price[1]))/2;
+            else //the value is in range value to inf
+                var ret = parseFloat(price[0])/2;
+        }
         return ret;
     }
     var currValue = attrs[parseInt(node.index) - 1];
-    console.log(currValue);
+    //console.log(currValue);
     for(cond in node.conditions){
+        //console.log("currval:"+currValue+" cond:"+node.conditions[cond]);
         if(comparator(node.conditions[cond],currValue) === true) {
+            //console.log("got in!");
             return (_classify(node.children[cond],attrs));
         }
 
