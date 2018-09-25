@@ -312,7 +312,7 @@ function calculatePrice(pr) {
             //wrong number
             else                                 return 0;
         } else {    //number is floar
-            if(pr < 0.7) return pr; //price is lower than 1.1 dollars
+            if(pr < 0.15) return pr; //price is lower than 0.15 dollars
             //if its above 1.1 dollars it must be cpm so divide by 1000
             else         return pr/1000.0; 
         }
